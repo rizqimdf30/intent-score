@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MatchActivity">
-
     <TextView
         android:id="@+id/txt_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Home Team"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,27 +41,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_logo" />
 
-    <Button
-        android:id="@+id/btn_add_home"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Home Score"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/score_home"
+        tools:layout_editor_absoluteX="-16dp">
 
+        <Button
+            android:id="@+id/btn_add_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+        <Button
+            android:id="@+id/btn_add_home2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="+2" />
+
+        <Button
+            android:id="@+id/btn_add_home3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/txt_away"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Away Team"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_marginBottom="20dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,30 +107,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/away_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn_add_away"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Add Away Score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/score_away"
+        tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/btn_result"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_add_away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+        <Button
+            android:id="@+id/btn_add_away2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="+2" />
+
+        <Button
+            android:id="@+id/btn_add_away3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cek Hasil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="reset"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_result"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/maroon"
+            android:text="Cek Hasil"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
